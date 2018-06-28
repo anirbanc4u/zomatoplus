@@ -49,7 +49,7 @@ public class RestaurantController {
 	}
 	
 	@PostMapping("/getAllItem")
-	public List<Item> itemList(@RequestBody Long id){
+	public List<Item> itemList(@RequestParam("id") Long id){
 		
 		List<Item> itm=(List<Item>) itemRepository.findByRestaurantId(id);
 		return itm;
